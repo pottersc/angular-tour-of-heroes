@@ -12,12 +12,15 @@ import { HeroService } from './hero.service';
 })
 
 export class HeroesComponent implements OnInit {
+  mystr: string;
   selectedHero: Hero;
   heroes: Hero[];
+
   constructor(private heroService: HeroService, private router: Router) { }
 
   ngOnInit(): void {
     this.getHeroes();
+    this.mystr = 'helloasdf';
   }
 
   onSelect(hero: Hero): void {
@@ -32,4 +35,5 @@ export class HeroesComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedHero.id]);
   }
+
 }

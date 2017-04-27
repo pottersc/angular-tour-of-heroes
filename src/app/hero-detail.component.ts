@@ -9,9 +9,11 @@ import { Hero } from './hero';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: ['./heroes.component.css']
+  styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
+  @Input() hero: Hero;
+  // hero: Hero
   constructor(
     private heroService: HeroService,
     private route: ActivatedRoute,
@@ -24,6 +26,10 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero);
   }
 
-  @Input() hero: Hero;
-  // hero: Hero;
+  goBack(): void {
+    console.log('heroDetailComponent.goBack()');
+    this.location.back();
+  }
+
+
 }
