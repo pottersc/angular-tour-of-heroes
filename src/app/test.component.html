@@ -1,1 +1,14 @@
+<h1>{{title}}</h1>
+<button (click)="testClick();">click me</button>
+<br>
+<!--
+<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+<input #testInput id="test-input" (keyup)="testInput(testInput.value)" />
+-->
+<input #testInput id="test-input" (keyup)="onkey(testInput.value)" />
+<br>
+{{getDragonEventsStr()}}
+<br>
 hey there
+<br><br>
+{{result}}
