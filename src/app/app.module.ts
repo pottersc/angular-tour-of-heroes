@@ -14,6 +14,7 @@ import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
+import { TestComponent } from './test.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeroSearchComponent } from './hero-search.component';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
